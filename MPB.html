@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<title>Alex McComb Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="W3.CSS">
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="index.html" class="w3-bar-item w3-button">
+                <b>ALEX MCCOMB</b>
+            </a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Container -->
+
+    <div class="image_container">
+        <img class="mySlides" src="images/mpb/studyarea.png" style="object-fit: contain; width:110%; height: 120%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+        <img class="mySlides" src="images/mpb/indicies.png" style="object-fit: contain; width:110%; height:120%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+        <img class="mySlides" src="images/mpb/truecolor.png" style="object-fit: contain; width:90%; height:120%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+
+        <button class="w3-button w3-black w3-display-left" style="font-size: 30px;" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" style="font-size: 30px;" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <div class="skills">
+        <h3><strong>Skills Used:</strong></h3>
+        <h5>GIS Analysis &#9702 Spatial Data and Algorithms &#9702 GIS Workflow &#9702 Spatial Analysis &#9702 Communication Skills
+        </h5>
+        <a href="images/skills.png" class="w3-hover-text-green">
+            <strong>Descriptions</strong>
+        </a>
+
+    </div>
+
+
+
+
+    <!-- Java Image Container -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+    <!-- Project Outline -->
+
+    <div class="outline">
+        <h4>Hyper Spectral Satellite Project</h4>
+   
+
+        <h5>
+            <p> The purpose of the study was to use hyper spectral imagery to assess mountain pine beetle attack in a commonly
+                infested area for a recent date, and to determine the efficacy of using this type of imagery for detecting
+                pine beetle outbreak. Multiple vegetation indices were used to help determine the health of the trees in
+                the study area.
+            </p>
+        </h5>
+
+        <h5>
+            <a href="images/mpb/mpbpaper.pdf" target="_blank" class="w3-hover-text-green"><strong>Read Report</strong> </a>
+        </h5>
+
+    </div>
+
+      <!-- Footer -->
+      <div class="footer_pages" style="color:rgb(255, 255, 255); text-shadow: -3px 3px 10px #000000;"><strong>&#169; Alex McComb, 2018</strong>
+      </div>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<title>Alex McComb Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="W3.CSS">
+<link rel="icon" href="images/icon.png">
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="index.html" class="w3-bar-item w3-button">
+                <b>ALEX MCCOMB</b>
+            </a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Container -->
+
+    <div class="image_container">
+        <img class="mySlides" src="images/current/BBMM.png" style="object-fit: contain; width:98%; height: 120%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+    </div>
+
+
+
+    <!-- Java Image Container -->
+    <script language="javascript">
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+    <!-- Project Outline -->
+
+    <div class="outline">
+        <h4>Modeled Migration Routes Web and Outreach Maps</h4>
+    
+
+        <h5>
+            <p>  Data were gathered from the massive GPS collar database using SQL to pull out specific data.  A Brownian Bridge Migration Model was ran on the data to find areas of high and low use for migration.  A 3D map using ArcGIS JavaScript API is being created to allow users to better visualize the routes and understand them through multiple popup info graphs.  The purpose of the project is to create visually appealing maps and easy to use web maps to allow stakeholders and the public to understand the purpose of the migration initiative.  
+            </p>
+        </h5>
+    </br>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer_pages" style="color:rgb(255, 255, 255); text-shadow: -3px 3px 10px #000000;"><strong>&#169; Alex McComb, 2018</strong>
+    </div>
+
+</body>
+
+</html>

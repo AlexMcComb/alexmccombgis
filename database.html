@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<title>Alex McComb Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="W3.CSS">
+<link rel="icon" href="images/icon.png">
+
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="index.html" class="w3-bar-item w3-button">
+                <b>ALEX MCCOMB</b>
+            </a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Container -->
+
+    <div class="image_container">
+        <img class="mySlides" src="images/database/relational.png" style="object-fit: contain; width:90%; height: 110%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+        <img class="mySlides" src="images/database/diagram.png" style="object-fit: contain; width:90%; height:110%; margin: 0; position: absolute; top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%)">
+
+        <button class="w3-button w3-black w3-display-left" style="font-size: 30px;" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" style="font-size: 30px;" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+ 
+
+    <!-- Java Image Container -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+
+    <!-- Project Outline -->
+
+    <div class="outline">
+        <h4>GPS Collar Database</h4>
+
+        <h5>
+            <p>The database that has been created addresses the increased use and deployment of GPS collars on various species
+                at the Department of Wildlife Resources (DWR).
+            </p>
+            <br>
+            <p> The database was designed and planned out using an entity relationship model and a relational
+                model. This laid the groundwork for how the database would function before it was built. The database is
+                centered around a unique collar ID that is linked to various data such as health status, coordinates, and
+                individual species. </p>
+        </h5>
+        </br>
+        <h6>
+            <a href="images/database/datapaper.pdf" target="_blank" class="w3-hover-text-green">Read Report</a>
+        </h6>
+
+    </div>
+
+      <!-- Footer -->
+      <div class="footer_pages" style="color:rgb(255, 255, 255); text-shadow: -3px 3px 10px #000000;"><strong>&#169; Alex McComb, 2018</strong>
+      </div>
+
+</body>
+
+</html>
